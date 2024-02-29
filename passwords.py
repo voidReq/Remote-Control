@@ -6,7 +6,7 @@ import win32crypt
 from Crypto.Cipher import AES
 import shutil
 from datetime import timezone, datetime, timedelta
-
+#CREDITS: https://thepythoncode.com/article/extract-chrome-passwords-python
 
 def get_chrome_datetime(chromedate):
   """Return a `datetime.datetime` object from a chrome format datetime
