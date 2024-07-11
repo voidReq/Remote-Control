@@ -10,6 +10,7 @@ Libraries are a little wonky, you might need to find some of them yourself.
 3. More detailed details command (idk what else to add)
 4. Figure out how to make a bunch of params that the user can ignore if they want (look into parsing lib)
 5. Make it a telegram bot? :O
+6. Integrate MQTT protocol to send some data
 
 
 **COMMANDS**
@@ -61,3 +62,6 @@ Libraries are a little wonky, you might need to find some of them yourself.
 17. Reverse shell
    Usage: !revshell IP PORT
    Does: Initiates a reverse shell on a given ip and port
+18. Move
+  Usage: !move fileName destination
+  Does: Moves a file
