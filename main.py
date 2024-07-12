@@ -356,7 +356,10 @@ async def shell(ctx, *command):
 @bot.command
 async def dump(ctx):
   try:
-    await ctx.send(dump())
+    file_path = os.path.join(os.getcwd(), "file269446.txt")
+    area = ctx.message.channel
+    await area.send(file=discord.File(file_path), content="Your dump")
+    os.remove(file_path)
   except Exception as e:
     await ctx.send(f"There has been an error\n{e}")
   
