@@ -352,7 +352,15 @@ async def shell(ctx, *command):
     return_code = subprocess.call(f"{command}", shell=True)
   except Exception as e:
     await ctx.send(f"There has been an error\n{e}")
-    
+   
+@bot.command
+async def dump(ctx):
+  try:
+    await ctx.send(dump())
+  except Exception as e:
+    await ctx.send(f"There has been an error\n{e}")
+  
+                                                
 
 
 
