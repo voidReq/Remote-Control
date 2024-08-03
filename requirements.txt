@@ -1,0 +1,10 @@
+discord.py==2.3.2
+getmac==0.9.4
+numpy~=1.26.0
+PyAutoGUI==0.9.54
+pycryptodome==3.19.0
+pywin32==306
+Requests==2.31.0
+opencv-python~=4.8.1.78
+pygame~=2.6.0
+psutil~=6.0.0
