@@ -433,4 +433,4 @@ async def dump(ctx, *, argument=None):
     await ctx.send(f"There has been an error\n{e}")
   
 
-bot.run("MTE1ODkwNzE4MTI1MzUyNTU4Nw.GjjCQI.Ta88Cjuc7qdV6DDL3Bl7bl6tqwQmOD5lK3wxxM")
+bot.run("")
