@@ -3,7 +3,6 @@ Note: All tokens in commit history are now expired
 # Remote-Control
 ## This project will almost certainly no longer be updated. No idea if it still works. I'll likely remake it in C, or something similar.
 
-type shi
 
 ### This was fully created as practice with Python, and is inefficient and slow, with few practical capabilities.
 Libraries are a little wonky, you might need to find some of them yourself.
