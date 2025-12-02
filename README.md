@@ -1,18 +1,17 @@
-Note: All tokens in commit history are now expired
+Note: All tokens in commit history are now expired/deleted
 
 # Remote-Control
-## This project will almost certainly no longer be updated. No idea if it still works. I'll likely remake it in C, or something similar.
 
+## DISCLAIMER:
+This was created purely for educational purposes and practice with coding. It never has been deployed, and never will be. Besides flagging antivirus, it is relatively slow and impractical.
 
-### This was fully created as practice with Python, and is inefficient and slow, with few practical capabilities.
-Libraries are a little wonky, you might need to find some of them yourself.
 
 **TO DO (in no particular order)**
 1. Keylogger? Eventually?
 2. Reverse shell shortcut (done, hopefully?)
 3. More detailed details command (idk what else to add)
 4. Figure out how to make a bunch of params that the user can ignore if they want (look into parsing lib)
-5. Make it a telegram bot? :O
+5. Make it a telegram bot?
 6. Integrate MQTT protocol to send some data
 
 
